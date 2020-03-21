@@ -6,8 +6,10 @@ var os = require('os');
 var server = http.createServer(function (req, resp) {
 	var contentType = 'text/html';
 
+	var show = "OS: " + os.type() + " " + os.release() + " Image: v1"
+
 	resp.writeHead(200, { 'Content-Type': contentType });
-	resp.write("OS: " + os.release() + " Image: v1");
+	resp.write(show);
 	resp.end();
 });
 
