@@ -1,4 +1,3 @@
-
 var http = require('http');
 var os = require('os');
 // var fileSystem = require('fs');
@@ -6,7 +5,13 @@ var os = require('os');
 var server = http.createServer(function (req, resp) {
 	var contentType = 'text/html';
 
-	var show = "OS: " + os.type() + " " + os.release() + " Image: v1"
+	var dateObj = new Date();
+	var year = dateObj.getUTCFullYear();
+	var month = dateObj.getUTCMonth();
+	var day = dateObj.getUTCDate();
+
+	var datformatted = year + month + day;
+	var show = "OS: " + os.type() + " " + os.release() + " Image: v1\n Xendit - Trial - Ariz - 20200320 - " + datformatted
 
 	resp.writeHead(200, { 'Content-Type': contentType });
 	resp.write(show);
@@ -14,5 +19,3 @@ var server = http.createServer(function (req, resp) {
 });
 
 server.listen(8080);
-
-
