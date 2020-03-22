@@ -1,6 +1,6 @@
 {
   "name": "xendit_trial_page",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Simple text that listens on localhost:8080",
   "main": "server.js",
   "scripts": {
