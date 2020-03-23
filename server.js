@@ -40,9 +40,9 @@ var server = http.createServer(function (req, resp) {
 	});
 
 	const pool = mariadb.createPool({
-		host: '10.47.253.35',
-		user: 'root',
-		password: 'mfDN2QUN77Zrk24DXt975CLBvQADMy7h',
+		host: process.env.MARIADB_HOST,
+		user: process.env.MARIADB_USER,
+		password: process.env.MARIADB_PASSWORD,
 		connectionLimit: 2
 	});
 	pool.getConnection()
