@@ -10,4 +10,6 @@ COPY server.js .
 
 RUN npm install
 
+# Add user
+
 CMD ["npm", "start"]
