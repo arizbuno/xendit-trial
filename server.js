@@ -50,11 +50,10 @@ var server = http.createServer(function (req, resp) {
 
 			conn.query("INSERT INTO loginTable (path) VALUES (?);", [path])
 				.then((res) => {
-					console.log(res); // { affectedRows: 1, insertId: 1, warningStatus: 0 }
+					console.log(res);
 					conn.end();
 				})
 				.catch(err => {
-					//handle error
 					console.log(err);
 					conn.end();
 				})
